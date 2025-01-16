@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Jura;
+}
+
+html,
+body {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.hero {
+  width: 100%;
+  height: calc(100vh - 4rem);
+  display: flex;
+  margin-top: 4rem;
+  align-self: center;
+  justify-content: space-between;
+}
+.heroimg {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-grow: 0.1;
+  background-image: url(/Media/hero1.png);
+  background-size: cover;
+}
+
+.herotext {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0 0 5rem;
+}
+
+.herotext h1 {
+  font-weight: 800;
+  font-size: 7rem;
+  color: orange;
+}
+
+.herotext h3 {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  padding: 20px 5px 30px 5px;
+}
+
+.herotext .button {
+  cursor: pointer;
+  height: 3rem;
+  width: 10rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  background-color: orange;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 10px 5px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.herotext .button:hover {
+  background-color: orange;
+  color: white;
+  box-shadow: 0 4px 14px gray;
+
+}
+
+
+.events{
+  height: 30rem;
+  width: 100%;
+  background-color: blueviolet;
+}
+
+.member{
+  height: 30rem;
+  width: 100%;
+  background-color: burlywood;
+}
+
+
+.contact{
+  height: 35rem;
+  width: 100%;
+  background-color: chartreuse;
+}
+
+.footer{
+  height: 18rem;
+  width: 100%;
+  background-color: rgb(51, 127, 235);
+}
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    margin-top: 3.5rem;
+  }
+  .heroimg {
+    height: 30rem;
+    width: 30rem;
+    display: flex;
+    background-image: url(/Media/hero1.png);
+    background-size: cover;
+  }
+
+  .herotext {
+    height: 25rem;
+    width: 100%;
+    display: flex;
+    /* background-color: blueviolet; */
+  }
+}
+
+

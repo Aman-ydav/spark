@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARK</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" href="/Media/logo_bg.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-carousel">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/485/528/small_2x/back-end-development-line-2d-animation-software-programmer-4k-motion-graphic-black-man-developer-coding-computer-coder-typing-on-laptop-linear-animated-cartoon-flat-concept-white-background-video.jpg"
+                alt="Slide 1" class="carousel-image active">
+            <img src="https://img.freepik.com/free-vector/programming-languages-learning-software-coding-courses-website-development-class-script-writing-it-programmers-cartoon-characters_335657-3454.jpg"
+                alt="Slide 2" class="carousel-image">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/026/485/528/small_2x/back-end-development-line-2d-animation-software-programmer-4k-motion-graphic-black-man-developer-coding-computer-coder-typing-on-laptop-linear-animated-cartoon-flat-concept-white-background-video.jpg"
+                alt="Slide 3" class="carousel-image">
+            <img src="https://img.freepik.com/free-vector/programming-languages-learning-software-coding-courses-website-development-class-script-writing-it-programmers-cartoon-characters_335657-3454.jpg"
+                alt="Slide 4" class="carousel-image">
+        </div>
+
+        <div class="form-container">
+            <h1>Join SPARK</h1>
+            <form action="/submit" method="POST">
+                <div id="error-message" style="color: red; margin: 10px 0; display: none;"></div>
+                <label for="name">Name <span>*</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="regno">Registration Number <span>*</span></label>
+                <input type="text" id="regno" name="regno" required>
+
+                <label for="email">Email <span>*</span></label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number (WhatsApp) <span>*</span></label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="department">Department (like B.tech CSE) <span>*</span></label>
+                <input type="text" id="department" name="department" required>
+
+                <label>Interested Domain <span>*</span></label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="domain" value="Technical"> Technical</label>
+                    <label><input type="checkbox" name="domain" value="Web-Development"> Web Development</label>
+                    <label><input type="checkbox" name="domain" value="Research"> Research and Development (RND)</label>
+                    <label><input type="checkbox" name="domain" value="Marketing"> Marketing</label>
+                    <label><input type="checkbox" name="domain" value="Graphic Designer"> Graphic Designer</label>
+                    <label><input type="checkbox" name="domain" value="Event Management"> Event Management</label>
+                </div>
+
+                <label for="contribution">How can you contribute to SPARK? <span>*</span></label>
+                <textarea id="contribution" name="contribution" required></textarea>
+
+                <div id="error-message" style="color: red; margin-top: 10px; display: none;"></div>
+
+                <button type="submit" onclick="window.location.href='../index.html'">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./app.js">
+
+    </script>
+</body>
+
+</html>

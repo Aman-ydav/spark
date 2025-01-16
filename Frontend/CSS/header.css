@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Jura;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+::selection {
+  background-color: orange;
+  color: white;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+html::-webkit-scrollbar{
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background-color: orange;
+  border-radius: 5rem;
+}
+
+
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  width: 100%;
+  padding: 0rem 2rem 0rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px rgb(184, 183, 183);
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.header .bar {
+  display: none;
+}
+
+.navbar a {
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.4;
+  color: black;
+  padding: 5px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease,box-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: orange;
+  color: #fff;
+  box-shadow: 0 4px 10px gray;
+}
+
+@media (max-width: 800px) {
+  .header .bar {
+    display: block;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+
+  .header .navbar {
+    max-height: 0px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    top: 3.7rem;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .header {
+    height: 3.5rem;
+    padding: 1rem 1.5rem 1rem 1rem;
+    width: 100%;
+  }
+  .navbar a {
+    width: 90%;
+    color: black;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .navbar a:hover {
+    background-color: orange;
+    color: #fff;
+
+  }
+}
