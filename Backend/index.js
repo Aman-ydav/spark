@@ -3,26 +3,26 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
-app.use(cors());
 
-const DB_URI =
-  "mongodb+srv://Spark:<Spark@123>@spark.6wb1v.mongodb.net/?retryWrites=true&w=majority&appName=Spark";
+// CORS Configuration
+app.use(cors({
+  origin: 'https://sparklpu.netlify.app/', // Replace with your Netlify domain
+  methods: ['GET', 'POST'],
+  credentials: true,
+}));
+
+// MongoDB Connection
+const DB_URI = process.env.MONGO_URI;
 
 mongoose
   .connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to MongoDB Atlas"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+  .catch(err => console.error("MongoDB connection error:", err));
 
-
-require('dotenv').config();
-
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB Atlas'))
-  .catch(err => console.error('MongoDB connection error:', err));
-
-
+// User Schema
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   regno: { type: String, required: true, unique: true },
@@ -35,11 +35,12 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-app.use(cors());
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../Frontend")));
 
+// Routes
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../Frontend/index.html"));
 });
@@ -55,9 +56,9 @@ app.post("/submit", async (req, res) => {
     });
 
     if (existingUser) {
-      return res.redirect(
-        "/form?error=Registration Number or Email already exists!"
-      );
+      return res.status(400).send({
+        error: "Registration Number or Email already exists!",
+      });
     }
 
     const user = new User({
@@ -71,14 +72,15 @@ app.post("/submit", async (req, res) => {
     });
 
     await user.save();
-    res.redirect("/");
+    res.status(200).send({ message: "Registration successful!" });
   } catch (error) {
-    console.error(error);
+    console.error("Error saving user:", error);
     res.status(500).send("Server Error");
   }
 });
 
-const PORT = 5000;
+// Server Listener
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
