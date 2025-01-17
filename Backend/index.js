@@ -3,26 +3,19 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 const cors = require("cors");
-require("dotenv").config();
 
 const app = express();
 
-// CORS Configuration
-app.use(cors({
-  origin: 'https://sparklpu.netlify.app/', // Replace with your Netlify domain
-  methods: ['GET', 'POST'],
-  credentials: true,
-}));
 
-// MongoDB Connection
-const DB_URI = process.env.MONGO_URI;
-
-mongoose
-  .connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("Connected to MongoDB Atlas"))
+mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log("Connected to MongoDB"))
   .catch(err => console.error("MongoDB connection error:", err));
 
-// User Schema
+
+
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   regno: { type: String, required: true, unique: true },
@@ -35,12 +28,13 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-// Middleware
+
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../Frontend")));
 
-// Routes
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../Frontend/index.html"));
 });
@@ -51,36 +45,43 @@ app.get("/form", (req, res) => {
 
 app.post("/submit", async (req, res) => {
   try {
+    const { name, regno, email, phone, department, domain, contribution } = req.body;
+
+    // Check for missing fields
+    if (!name || !regno || !email || !phone || !department || !contribution) {
+      return res.status(400).send("All fields are required!");
+    }
+
+    // Check if the user already exists
     const existingUser = await User.findOne({
-      $or: [{ regno: req.body.regno }, { email: req.body.email }],
+      $or: [{ regno: regno }, { email: email }],
     });
 
     if (existingUser) {
-      return res.status(400).send({
-        error: "Registration Number or Email already exists!",
-      });
+      return res.redirect("/form?error=Registration Number or Email already exists!");
     }
 
+    // Create a new user
     const user = new User({
-      name: req.body.name,
-      regno: req.body.regno,
-      email: req.body.email,
-      phone: req.body.phone,
-      department: req.body.department,
-      domain: req.body.domain,
-      contribution: req.body.contribution,
+      name,
+      regno,
+      email,
+      phone,
+      department,
+      domain,
+      contribution,
     });
 
     await user.save();
-    res.status(200).send({ message: "Registration successful!" });
+    res.redirect("/");
   } catch (error) {
-    console.error("Error saving user:", error);
-    res.status(500).send("Server Error");
+    console.error("Error submitting form:", error);
+    res.status(500).send("Internal Server Error");
   }
 });
 
-// Server Listener
+
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT}`);
 });
