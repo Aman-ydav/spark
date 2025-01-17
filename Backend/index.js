@@ -59,7 +59,7 @@ app.post("/submit", async (req, res) => {
     });
 
     if (existingUser) {
-      return res.redirect("/form?error=Registration Number or Email already exists!");
+      return res.redirect("/Form?error=Registration Number or Email already exists!");
     }
 
     // Create a new user
