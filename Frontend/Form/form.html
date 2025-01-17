@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
@@ -33,7 +32,7 @@
 
         <div class="form-container">
             <h1>Join SPARK</h1>
-            <form action="/submit" method="POST">
+            <form id="registrationForm">
                 <div id="error-message" style="color: red; margin: 10px 0; display: none;"></div>
                 <label for="name">Name <span>*</span></label>
                 <input type="text" id="name" name="name" required>
@@ -63,16 +62,12 @@
                 <label for="contribution">How can you contribute to SPARK? <span>*</span></label>
                 <textarea id="contribution" name="contribution" required></textarea>
 
-                <div id="error-message" style="color: red; margin-top: 10px; display: none;"></div>
-
                 <button type="submit">Submit</button>
             </form>
         </div>
     </div>
 
-    <script src="./app.js">
-
-    </script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
