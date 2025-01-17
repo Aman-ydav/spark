@@ -5,16 +5,17 @@ const path = require("path");
 const cors = require("cors");
 
 const app = express();
+require("dotenv").config();
 
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://Spark:Spark%40123@spark.6wb1v.mongodb.net/?retryWrites=true&w=majority&appName=Spark";
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose
+  .connect(MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("Connected to MongoDB"))
-  .catch(err => console.error("MongoDB connection error:", err));
-
-
+  .catch((err) => console.error("MongoDB connection error:", err));
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
