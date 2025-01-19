@@ -8,15 +8,61 @@ body {
   align-items: center;
 }
 ::selection {
-    background-color: #FF991C;
-    color: white; 
-  }
+  background-color: #ff991c;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #ff991c;
+  border-radius: 5rem;
+}
+
+
+.navigation-buttons {
+  position: absolute;
+  top: 65px;
+  left: 50px; 
+  z-index: 1;
+}
+
+.home-button {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #fab941;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.home-button:hover {
+  box-shadow: 0 4px 14px gray;
+}
+
+
+
 .container {
   margin: 50px;
   display: flex;
   width: 100%;
   max-width: 1200px;
   align-items: center;
+  opacity: 1003;
 }
 
 .image-carousel {
@@ -50,17 +96,18 @@ body {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   width: 50%;
   position: relative;
+  opacity: 1001;
 }
 
 .form-container h1 {
   margin-bottom: 20px;
   font-size: 3rem;
   font-weight: 700;
-  color:  #FF991C;
+  color: #ff991c;
 }
 
 span {
-  color:  #FF991C;
+  color: #ff991c;
 }
 form label {
   width: 90%;
@@ -70,7 +117,7 @@ form label {
   color: #495057;
 }
 
-form textarea{
+form textarea {
   max-height: 300px;
   max-width: 90%;
   min-width: 90%;
@@ -88,7 +135,7 @@ form textarea {
 }
 
 #error-message {
-  color:  #FF991C;
+  color: #ff991c;
   font-size: 0.9rem;
   margin-bottom: 15px;
   font-weight: bold;
@@ -98,7 +145,7 @@ form textarea {
 }
 
 form button {
-  background-color:  #FF991C;
+  background-color: #ff991c;
   color: white;
   font-size: 1rem;
   padding: 10px 20px;
@@ -109,7 +156,7 @@ form button {
 }
 
 form button:hover {
-  background-color:  #FF991C;
+  background-color: #ff991c;
   transform: scale(1.05);
 }
 
@@ -126,7 +173,7 @@ form button:hover {
 
 .checkbox-group input {
   margin-right: 10px;
-  color:  #FF991C;
+  color: #ff991c;
 }
 
 @media (max-width: 768px) {
@@ -182,8 +229,6 @@ form button:hover {
     width: 100%;
     padding: 10px;
     margin: 30px;
-
-    
   }
 
   .form-container {
