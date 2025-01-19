@@ -24,7 +24,7 @@ body {
   width: 30%;
   display: flex;
   flex-grow: 0.1;
-  background-image: url(/Media/hero1.png);
+
   background-size: cover;
 }
 
@@ -67,40 +67,31 @@ body {
   background-color: orange;
   color: white;
   box-shadow: 0 4px 14px gray;
-
 }
 
-
-.events{
+.events {
   height: 30rem;
   width: 100%;
   background-color: blueviolet;
 }
 
-.member{
+.member {
   height: 30rem;
   width: 100%;
   background-color: burlywood;
 }
 
-
-.contact{
+.contact {
   height: 35rem;
   width: 100%;
   background-color: chartreuse;
 }
 
-.footer{
+.footer {
   height: 18rem;
   width: 100%;
   background-color: rgb(51, 127, 235);
 }
-
-
-
-
-
-
 
 @media (max-width: 800px) {
   .hero {
@@ -125,5 +116,3 @@ body {
     /* background-color: blueviolet; */
   }
 }
-
-
