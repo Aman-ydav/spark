@@ -7,10 +7,10 @@
 
 html,
 body {
-  position: relative;
   height: 100vh;
   width: 100%;
 }
+
 .hero {
   width: 100%;
   height: calc(100vh - 4rem);
@@ -18,14 +18,7 @@ body {
   margin-top: 4rem;
   align-self: center;
   justify-content: space-between;
-}
-.heroimg {
-  height: 100%;
-  width: 30%;
-  display: flex;
-  flex-grow: 0.1;
-
-  background-size: cover;
+  overflow: hidden;
 }
 
 .herotext {
@@ -39,13 +32,42 @@ body {
 .herotext h1 {
   font-weight: 800;
   font-size: 7rem;
-  color: orange;
+  color: #fd920f;
+  transition: text-shadow 0.1s linear;
+  cursor: pointer;
 }
+.herotext p{
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  opacity: 0;
+  visibility: hidden;
+  font-weight: 500;
+  color: gray;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.herotext p span{
+  font-weight: 800;
+  color: #fd920f;
+}
+.herotext h1:hover{
+  text-shadow: 0 4px 6px rgb(205, 202, 202);
+}
+.herotext h1:hover ~ p {
+  opacity: 1;
+  visibility: visible;
+}
+.herotext h1:active ~ p {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .herotext h3 {
   font-size: 1.3rem;
   line-height: 1.6rem;
   padding: 20px 5px 30px 5px;
+  color: rgb(95, 94, 94);
 }
 
 .herotext .button {
@@ -56,7 +78,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: white;
-  background-color: orange;
+  background-color: #fd920f;
   border: none;
   text-decoration: none;
   border-radius: 8px;
@@ -64,14 +86,27 @@ body {
   transition: box-shadow 0.2s ease-in-out;
 }
 .herotext .button:hover {
-  background-color: orange;
+  background-color: #FF991C;
   color: white;
   box-shadow: 0 4px 14px gray;
+}
+
+.heroimg {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  position: relative;
+}
+
+.heroimg img{
+  height: 100%;
+  width: 100%;
 }
 
 .events {
   height: 30rem;
   width: 100%;
+  margin: 0;
   background-color: blueviolet;
 }
 
@@ -96,23 +131,28 @@ body {
 @media (max-width: 800px) {
   .hero {
     display: flex;
-    flex-wrap: wrap;
+    position: relative;
     width: 100%;
+    margin: 0px;
     height: calc(100vh - 3.5rem);
     margin-top: 3.5rem;
+    background: url("../Media/Frame.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .heroimg {
-    height: 30rem;
-    width: 30rem;
-    display: flex;
-    background-image: url(/Media/hero1.png);
-    background-size: cover;
+    display: none;
   }
 
   .herotext {
-    height: 25rem;
+    height: 80%;
     width: 100%;
     display: flex;
-    /* background-color: blueviolet; */
+    position: relative;
+  }
+
+  .herotext h3{
+      width: 80%;
   }
 }

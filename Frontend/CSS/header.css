@@ -17,7 +17,7 @@ body {
 
 html{
   scroll-behavior: smooth;
-  scroll-padding-top: 3rem;
+  scroll-padding-top: 5rem;
 }
 
 html::-webkit-scrollbar{
@@ -30,7 +30,7 @@ html::-webkit-scrollbar-track{
 
 html::-webkit-scrollbar-thumb{
   background-color: orange;
-  border-radius: 5rem;
+  border-radius: 4rem;
 }
 
 
@@ -44,7 +44,7 @@ html::-webkit-scrollbar-thumb{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px rgb(184, 183, 183);
+  box-shadow: 0 3px rgb(226, 226, 226);
   z-index: 1000;
 }
 
@@ -92,7 +92,7 @@ html::-webkit-scrollbar-thumb{
     align-items: center;
     gap: 0.8rem;
     position: absolute;
-    top: 3.7rem;
+    top: 3.6rem;
     right: 0;
     width: 100%;
     z-index: 1000;
@@ -113,6 +113,5 @@ html::-webkit-scrollbar-thumb{
   .navbar a:hover {
     background-color: orange;
     color: #fff;
-
   }
 }
