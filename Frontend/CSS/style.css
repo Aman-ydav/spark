@@ -15,6 +15,7 @@ body {
   width: 100%;
   height: calc(100vh - 4rem);
   display: flex;
+  flex-direction: row;
   margin-top: 4rem;
   align-self: center;
   justify-content: space-between;
@@ -38,7 +39,7 @@ body {
 }
 .herotext p{
   position: absolute;
-  top: 10%;
+  top: 18%;
   left: 6%;
   opacity: 0;
   visibility: hidden;
@@ -90,6 +91,11 @@ body {
   color: white;
   box-shadow: 0 4px 14px gray;
 }
+.herotext .button:active {
+  background-color: #FF991C;
+  color: white;
+  box-shadow: 0 4px 14px gray;
+}
 
 .heroimg {
   height: 100%;
@@ -131,14 +137,15 @@ body {
 @media (max-width: 800px) {
   .hero {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     width: 100%;
     margin: 0px;
     height: calc(100vh - 3.5rem);
     margin-top: 3.5rem;
-    background: url("../Media/Frame.png");
-    background-size: cover;
-    background-position: center;
+    background: url("../Media/Frame_m.png");
+    background-size: 580px 400px;
+    background-position: bottom right;
     background-repeat: no-repeat;
   }
   .heroimg {
@@ -146,13 +153,35 @@ body {
   }
 
   .herotext {
-    height: 80%;
+    height: 70%;
     width: 100%;
     display: flex;
     position: relative;
+    padding: 3rem 0 0 2rem;
+  }
+  .herotext h1 {
+    font-weight: 800;
+    font-size: 5.5rem;
   }
 
   .herotext h3{
       width: 80%;
+      font-size: 1rem;
+      padding: 10px 5px 15px 5px;
+
+  }
+  .herotext .button{
+    margin: 5px 5px;
+  }
+
+  .herotext p{
+    position: absolute;
+    top: 4%;
+    left: 12%;
+    opacity: 0;
+    visibility: hidden;
+    font-weight: 500;
+    color: gray;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 }

@@ -17,7 +17,7 @@ body {
 
 html{
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 4rem;
 }
 
 html::-webkit-scrollbar{
@@ -40,7 +40,7 @@ html::-webkit-scrollbar-thumb{
   top: 0;
   height: 4rem;
   width: 100%;
-  padding: 0rem 2rem 0rem 5rem;
+  padding: 0rem 1.5rem 0rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -101,7 +101,7 @@ html::-webkit-scrollbar-thumb{
 
   .header {
     height: 3.5rem;
-    padding: 1rem 1.5rem 1rem 1rem;
+    padding: 1rem 1.5rem 1rem 2rem;
     width: 100%;
   }
   .navbar a {
