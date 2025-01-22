@@ -33,7 +33,7 @@
         </a>
         <div class="navbar">
             <a href="./">Home</a>
-            <a href="./events/">Event</a>
+            <a href="./events/">Events</a>
             <a href="./team/">Team</a>
             <a href="./story/">Story</a>
             <a href="#contact">Contact Us</a>
@@ -45,7 +45,8 @@
         <div class="herotext">
             <h1>SPARK</h1>
             <p>"<span>S</span>tudent <span>P</span>latform for <span>A</span>ccelerating <span>R</span>esourceful
-                <span>K</span>nowledge"</p>
+                <span>K</span>nowledge"
+            </p>
             <h3>We are a community dedicated to inspiring innovation, fostering collaboration, and empowering students
                 to grow. Our goal is to create a supportive space where individuals can connect, share ideas, and
                 achieve their potential together.
@@ -56,16 +57,68 @@
             <img src="./Media/hero.png" alt="hero_img">
         </div>
     </main>
-    <div class="events"></div>
-    <div class="team"></div>
-    <div class="contact" id="contact">
-
+    <div class="events-section">
+        <h2 class="events-heading">Events</h2>
+        <div class="carousel" id="carousel">
+            <div class="carousel-inner">
+                <div class="event-card">
+                    <a href="./events/"><img src="./Media/event1.png" alt="Event 1"></a>
+                    <div class="event-title">SIH 2024</div>
+                </div>
+                <div class="event-card">
+                    <a href="./events/"><img src="./Media/event2.png" alt="Event 2"></a>
+                    <div class="event-title">TECHSPRINT 2.O</div>
+                </div>
+                <div class="event-card">
+                    <a href="./events/"> <img src="./Media/event3.png" alt="Event 3"></a>
+                    <div class="event-title">PUM 2024</div>
+                </div>
+                <div class="event-card">
+                    <a href="./events/"> <img src="./Media/event1.png" alt="Event 4"></a>
+                    <div class="event-title">SIH 2024</div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <a href="./events/" class="view-more-btn">View More</a>
     </div>
-    <footer class="footer">
 
-    </footer>
+    <div class="team-section">
+        <h2 class="team-heading">Team</h2>
+        <div class="carousel-team" id="carousel-team">
+            <div class="carousel-inner-team">
+                <div class="team-card">
+                    <a href="./team/"><img src="./Media/team1.png" alt="team 1"></a>
+                    <div class="team-title">Har Aziz Singh<p>CEO</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <a href="./team/"><img src="./Media/team2.png" alt="team 2"></a>
+                    <div class="team-title">Nandish Panchal <p>Co-CEO</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <a href="./team/"> <img src="./Media/team3.png" alt="team 3"></a>
+                    <div class="team-title">Pranav MP<p>CFO</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <a href="./team/"><img src="./Media/team4.png" alt="team 4"></a>
+                    <div class="team-title">Vishnu Vardhan RG <p>CTO</p>
+                    </div>
+                </div>
+            </div>
+            <button class="prev-team" onclick="moveSlideT(-1)">&#10094;</button>
+            <button class="next-team" onclick="moveSlideT(1)">&#10095;</button>
+        </div>
+        <a href="./team/" class="view-more-btn-team">View More</a>
+    </div>
 
 
+    <div class="team"></div>
+    <div class="contact" id="contact"></div>
+    <footer class="footer"> </footer>
 
 
     <script src="./JS/script.js"></script>
