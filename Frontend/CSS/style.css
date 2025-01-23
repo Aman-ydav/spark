@@ -308,7 +308,7 @@ body {
 }
 .team-card img {
   width: 100%;
-  aspect-ratio: 9/10.5;
+  aspect-ratio: 9/10;
   transition: 0.2s ease;
 }
 .team-card:hover {
@@ -393,11 +393,101 @@ body {
   }
 }
 
-.contact {
-  height: 35rem;
-  width: 100%;
-  background-color: chartreuse;
+
+
+
+.contact{
+  text-align: center;
+  padding: 20px;
+  margin-top: 2rem;
 }
+
+.contact-heading {
+  display: block;
+  text-align: center;
+  font-size: 2.8rem;
+  color: rgb(95, 94, 94);
+  margin-bottom: 1rem;
+}
+
+
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.contact-image, .contact-form {
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.contact-form input, 
+.contact-form textarea, 
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+form textarea {
+  max-height: 200px;
+  min-height: 80px;
+  max-width: 100%;
+  min-width: 100%;
+}
+.contact-form{
+  background-color: #FFE9D5;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.contact-form button {
+  background-color: #fd920f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #fd920f;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+      flex-direction: column-reverse;
+      height: auto;
+  }
+  .contact-image, .contact-form {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+}
+
+
+
+
+
 
 .footer {
   height: 18rem;
