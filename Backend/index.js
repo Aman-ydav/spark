@@ -88,7 +88,7 @@ app.post("/submit", async (req, res) => {
 
     const user = new User({ name, regno, email, phone, department, domain, contribution });
     await user.save();
-    res.redirect("/?message=Successfully+registered");
+    res.redirect("/");
   } catch (error) {
     console.error("Error submitting form:", error);
     res.status(500).send("Internal Server Error");
@@ -99,10 +99,6 @@ app.post("/submit", async (req, res) => {
 app.post("/subscribe", async (req, res) => {
   try {
     const { email } = req.body;
-
-    if (!email) {
-      return res.status(400).send("Email is required!");
-    }
 
     const existingSubscription = await Newsletter.findOne({ email });
     if (existingSubscription) {
