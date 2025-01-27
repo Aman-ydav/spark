@@ -87,5 +87,15 @@ function handleSwipeT() {
   }
 }
 
+let newsletter = document.querySelector("#newsletter");
+
+newsletter.addEventListener("submit", () => {
+  alert("Successfully submitted");
+});
 
 
+let contact = document.querySelector("#contact");
+
+contact.addEventListener("submit", () => {
+  alert("Successfully submitted");
+});

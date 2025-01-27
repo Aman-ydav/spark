@@ -120,10 +120,12 @@
         <h2 class="contact-heading">Contact Us</h2>
         <div class="contact-section">
             <div class="contact-form">
-                <form action="/subscribe" method="POST">
-                    <input type="email" name="email" placeholder="Your Email Address" required>
-                    <button type="submit">Get Updates</button>
-                  </form>                  
+                <form action="/submit" method="POST" id="contact">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="query" rows="5" placeholder="Query" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
             <div class="contact-image">
                 <img src="./Media/contact_img.png" alt="Contact Us">
@@ -166,10 +168,10 @@
                             class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <div class="newsletter">
-                    <form action="/subscribe" method="POST">
-                        <input type="email" placeholder="Your Email Address" required>
+                    <form action="/subscribe" method="POST" id="newsletter">
+                        <input type="email" name="email" placeholder="Your Email Address" required>
                         <button type="submit">Get Updates</button>
-                    </form>
+                      </form> 
                 </div>
             </div>
         </div>
