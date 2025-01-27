@@ -5,6 +5,7 @@ const path = require("path");
 const cors = require("cors");
 
 const app = express();
+
 require("dotenv").config();
 
 const MONGODB_URI =
@@ -62,7 +63,7 @@ app.get("/form", (req, res) => {
 app.post("/submit", async (req, res) => {
   try {
     if (req.body.query) {
-      // Handling contact form submission
+     
       const { name, email, query } = req.body;
 
       if (!name || !email || !query) {
@@ -71,10 +72,10 @@ app.post("/submit", async (req, res) => {
 
       const contact = new Contact({ name, email, query });
       await contact.save();
-      return res.redirect("/?message=Contact+form+submitted+successfully");
+      return res.redirect("/");
     }
 
-    // Handling membership form submission
+    
     const { name, regno, email, phone, department, domain, contribution } = req.body;
 
     if (!name || !regno || !email || !phone || !department || !contribution) {
@@ -95,10 +96,15 @@ app.post("/submit", async (req, res) => {
   }
 });
 
-
 app.post("/subscribe", async (req, res) => {
   try {
+    console.log("Received data:", req.body);  // Debugging line
+
     const { email } = req.body;
+
+    if (!email || email.trim() === "") {
+      return res.status(400).send("Email is required!");
+    }
 
     const existingSubscription = await Newsletter.findOne({ email });
     if (existingSubscription) {
@@ -107,12 +113,13 @@ app.post("/subscribe", async (req, res) => {
 
     const subscription = new Newsletter({ email });
     await subscription.save();
-    res.redirect("/?message=Subscribed+successfully");
+    res.redirect("/");
   } catch (error) {
     console.error("Error subscribing:", error);
     res.status(500).send("Internal Server Error");
   }
 });
+
 
 
 const PORT = process.env.PORT || 5000;
