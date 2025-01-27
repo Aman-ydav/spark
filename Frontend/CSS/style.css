@@ -264,6 +264,9 @@ body {
     flex: 0 0 100%;
     margin: 0;
   }
+  .event-card:hover img {
+    transform: scale(1);
+  }
   .prev,
   .next {
     display: block;
@@ -372,6 +375,9 @@ body {
     flex: 0 0 100%;
     margin: 0;
   }
+  .team-card:hover img {
+    transform: scale(1);
+  }
   .prev-team,
   .next-team {
     display: block;
@@ -468,6 +474,9 @@ form textarea {
   color: white;
   border: none;
   cursor: pointer;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 .contact-form button:hover {
   background-color: #fd920f;
@@ -484,13 +493,3 @@ form textarea {
   }
 }
 
-
-
-
-
-
-.footer {
-  height: 18rem;
-  width: 100%;
-  background-color: rgb(51, 127, 235);
-}

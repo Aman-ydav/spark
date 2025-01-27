@@ -14,25 +14,6 @@ Welcome to the SPARK Application! 🚀 This project is a dynamic web application
 
 ---
 
-## 📂 Project Structure
-
-```plaintext
-Frontend/
-├── index.html          # Landing page
-├── style.css           # Global styles
-├── app.js              # Frontend logic
-└── Form/
-    ├── form.html       # Registration form page
-    ├── style.css       # Form-specific styles
-    └── app.js          # Form-specific logic
-
-Backend/
-├── server.js           # Main server file
-├── .env                # Environment variables
-└── package.json        # Node.js dependencies and scripts
-```
-
----
 
 ## 🚀 Quick Start
 
