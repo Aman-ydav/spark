@@ -5,41 +5,49 @@ h1{
     font-family: Jura;
 }
 
-.Mentorphoto{
-    margin-top: 100px;
-    width:350px;
-    height:350px;
+.MentorPhoto{
+    width:100%;
+    height: 80%;
     border-radius: 50%;
 }
 
-#Ruhul{
+.MentorRow {
+    margin-top: -12%;
     display: flex;
-
-
+    
 }
 
-#Mick{
-    display: flex;
-    margin-top: 150px;
-    /* margin-left:100px;
-    margin-right: 100px ; */
-}
-
-.row {
-    justify-content: space-between;
-    display: flex;
-    gap:10px;
-
-}
-
-.column{
+.MentorColumn{
+    flex:50%;
+    padding: 15%;
     align-content: center;
-    margin-right: 200px;
-    margin-left: 200px;
-    flex:40%;
-    padding:10px;
+    justify-content: center;
 }
 
 .description{
-    padding: 50px;
+    display: flex;
+    flex:50%;
+    margin-bottom: 2%;
+}
+
+.description p{
+    margin-top: -10%;
+    padding: 0 10% 0 10%;
+
+}
+
+
+.TeamPhoto{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.PhotoColumn{
+    flex: 25%;
+    padding: 80px;
+}
+.PhotoRow{
+    
+    display:flex;
+
 }
