@@ -27,7 +27,7 @@ h1{
 .description{
     display: flex;
     flex:50%;
-    margin-bottom: 2%;
+    margin-bottom: 7%;
 }
 
 .description p{
@@ -36,18 +36,37 @@ h1{
 
 }
 
-
 .TeamPhoto{
+    padding:17%;
     width:100%;
     height: 100%;
     border-radius: 50%;
 }
 .PhotoColumn{
-    flex: 25%;
+    flex: 33%;
     padding: 80px;
 }
 .PhotoRow{
-    
+    margin-bottom:3%;
     display:flex;
+}
 
+.PhotoColumn1{
+    margin: auto;
+    flex:100%;
+    width: max-content;
+    height: max-content;
+
+
+}
+.CEOPhoto{
+    width:100%;
+    height:100%;
+    padding:18%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.PhotoRow{
+    display:flex;
 }
