@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Spark is a student-run organization at Lovely Professional University (LPU), offering events, workshops, and learning opportunities.">
+        content="Spark-LPU is a student-run organization at Lovely Professional University (LPU), offering events, workshops, and learning opportunities.">
     <meta name="keywords"
-        content="Spark LPU, LPU events, Spark organization LPU, Spark Club Lovely Professional University">
+        content="Spark LPU,lpu spark, lpuspark, sparklpu, spark website, LPU events, Spark organization LPU, Spark Club Lovely Professional University">
+    <meta name="google-site-verification" content="dxm2wgSig3H076gVCg-o4QNGQx7B6ED1UP2HODsWLZQ" />
+    <meta name="msvalidate.01" content="B3BF638903C6FFBC4BBCC6D610F9F01A" />
 
-    <title>SPARK</title>
+    <title>SPARK-LPU</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="./CSS/footer.css">
 
 
+    <link rel="icon" href="./favicon.ico" type="image/ico">
     <link rel="icon" href="./Media/logo_bg.png">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,11 +118,13 @@
         </div>
         <a href="./team/" class="view-more-btn-team">View More</a>
     </div>
-    <div class="contact">
+
+
+    <div class="contact" id="contact">
         <h2 class="contact-heading">Contact Us</h2>
         <div class="contact-section">
             <div class="contact-form">
-                <form action="#" method="POST">
+                <form action="/submit" method="POST" id="contact">
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="query" rows="5" placeholder="Query" required></textarea>
@@ -133,7 +139,52 @@
 
 
 
-    <footer class="footer"> </footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo-section">
+                <div class="ft-head">
+                    <img src="./Media/logo_bg.png" alt="logo">
+                    <h3>SPARK</h3>
+                </div>
+                <p>Lovely Professional University<br>
+                    Jalandhar-Delhi, G.T. Road,<br>
+                    Phagwara, Punjab<br>
+                    (INDIA) - 144411</p>
+                <p>Tel: +91 82890-00254</p>
+                <p>Email: <a href="mailto:spark.lpu@gmail.com">spark.lpu@gmail.com</a> </p>
+            </div>
+            <div class="links-section">
+                <div class="ft-head">
+                    <h3>Useful Links</h3>
+                </div>
+                <p><a href="./">Home</a></p>
+                <p><a href="./events/">Events</a></p>
+                <p><a href="./team/">Team</a></p>
+                <p><a href="./story/">Story</a></p>
+                <p><a href="#contact">Contact Us</a></p>
+            </div>
+            <div class="social-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.instagram.com/spark_lpu/"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/spark2024/posts/?feedView=all"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="newsletter">
+                    <form action="/subscribe" method="POST" id="newsletter">
+                        <input type="email" name="email" placeholder="Your Email Address" required>
+                        <button type="submit">Get Updates</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2025 All Rights Reserved by Student Platform for Accelerating Resourceful Knowledge</p>
+        </div>
+    </footer>
+
+
 
     <script src="./JS/script.js"></script>
 </body>
