@@ -10,7 +10,7 @@ require("dotenv").config();
 
 const MONGODB_URI =
   process.env.MONGODB_URI ||
-  "mongodb+srv://sparklpu:Spark.123@spark-lpu.cngbd.mongodb.net/?retryWrites=true&w=majority&appName=SPARK-LPU";
+  "mongodb+srv://Spark:Spark%40123@spark.6wb1v.mongodb.net/?retryWrites=true&w=majority&appName=Spark";
 
 mongoose
   .connect(MONGODB_URI, {
