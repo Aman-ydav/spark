@@ -46,7 +46,7 @@ h2 {
     text-align: center;
 }
 
-p {
+.main-content p{
     margin-bottom: 1rem;
     color: #666;
     text-align: justify;
