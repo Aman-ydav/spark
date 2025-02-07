@@ -57,7 +57,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/form", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend/Form/form.html"));
+  res.sendFile(path.join(__dirname, "../Frontend/Form/index.html"));
 });
 
 app.post("/submit", async (req, res) => {

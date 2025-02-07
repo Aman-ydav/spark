@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Spark is a student-run organization at Lovely Professional University (LPU), offering events, workshops, and learning opportunities.">
+    <meta name="keywords"
+        content="Spark LPU form,lpu spark, sparklpu, spark form website, LPU events, Spark organization LPU, Spark Club Lovely Professional University">
+    <meta name="google-site-verification" content="dxm2wgSig3H076gVCg-o4QNGQx7B6ED1UP2HODsWLZQ" />
+    <meta name="msvalidate.01" content="B3BF638903C6FFBC4BBCC6D610F9F01A" />
+
+    <title>SPARK-LPU</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" href="../Media/logo_bg.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <div class="navigation-buttons">
+        <a href="../" class="home-button"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+    <div class="container">
+        <div class="image-carousel">
+            <img src="../Media/Form_images/form_image_1.jpg" alt="Slide 1" class="carousel-image active">
+            <img src="../Media/Form_images/form_image_2.jpg" alt="Slide 2" class="carousel-image">
+            <img src="../Media/Form_images/form_image_3.jpg" alt="Slide 3" class="carousel-image">
+            <img src="../Media/Form_images/form_image_4.webp" alt="Slide 4" class="carousel-image">
+            <img src="../Media/Form_images/form_image_5.jpg" alt="Slide 6" class="carousel-image">
+            <img src="../Media/Form_images/form_image_6.jpeg" alt="Slide 5" class="carousel-image">
+
+        </div>
+
+        <div class="form-container">
+            <h1>Join SPARK</h1>
+            <form action="/submit" method="POST">
+                <div id="error-message" style="color: red; margin: 10px 0; display: none;"></div>
+                <label for="name">Name <span>*</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="regno">Registration Number <span>*</span></label>
+                <input type="text" id="regno" name="regno" maxlength="8" minlength="8" pattern="\d{8}"
+                    title="Enter valid registration number" required>
+
+                <label for="email">Email <span>*</span></label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number (WhatsApp) <span>*</span></label>
+                <input type="text" id="phone" name="phone" maxlength="10" minlength="10" pattern="\d{10}"
+                    title="Enter valid mobile number" required>
+
+                <label for="department">Department (like B.tech CSE) <span>*</span></label>
+                <input type="text" id="department" name="department" pattern="[^0-9]*" title="Enter valid Department"
+                    required>
+
+                <label>Interested Domain <span>*</span></label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="domain" value="Technical"> Technical</label>
+                    <label><input type="checkbox" name="domain" value="Web-Development"> Web Development</label>
+                    <label><input type="checkbox" name="domain" value="Research"> Research and Development (RND)</label>
+                    <label><input type="checkbox" name="domain" value="Marketing"> Marketing</label>
+                    <label><input type="checkbox" name="domain" value="Graphic Designer"> Graphic Designer</label>
+                    <label><input type="checkbox" name="domain" value="Event Management"> Event Management</label>
+                </div>
+
+                <label for="contribution">How can you contribute to SPARK? <span>*</span></label>
+                <textarea id="contribution" name="contribution" required></textarea>
+
+                <div id="error-message" style="color: red; margin-top: 10px; display: none;"></div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./app.js">
+
+    </script>
+</body>
+
+</html>
