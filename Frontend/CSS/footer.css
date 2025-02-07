@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 60px;
+  flex-shrink: 0;
 }
 .footer .logo-section,
 .footer .links-section,

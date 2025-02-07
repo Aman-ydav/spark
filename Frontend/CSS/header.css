@@ -104,7 +104,7 @@ html::-webkit-scrollbar-thumb{
     height: 3.5rem;
     padding: 1rem 1.5rem 1rem 1.5rem;
     width: 100%;
-    box-shadow: 0 2px rgb(226, 226, 226);
+    box-shadow: 2px 1px 8px rgb(206, 205, 205);
   }
   .navbar a {
     width: 90%;
