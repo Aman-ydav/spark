@@ -8,3 +8,4 @@ bar.addEventListener("click", () => {
     nav.style.maxHeight = "300px";
   }
 });
+
