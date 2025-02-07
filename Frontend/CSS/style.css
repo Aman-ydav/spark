@@ -202,7 +202,7 @@ body {
 }
 .event-card img {
   width: 100%;
-  aspect-ratio: 9/10.5;
+  aspect-ratio: 9/10;
 
   transition: 0.2s ease;
 }
