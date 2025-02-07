@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="icon" href="/Media/logo_bg.png">
+    <link rel="icon" href="../Media/logo_bg.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
 
 <body>
 
-    <header class="header" id="home">
+    <header class="header" id="home" style="box-shadow: 2px 2px 6px rgb(197, 195, 195);">
         <a href="../">
             <img src="../Media/logo_bg.png" height="80px" width="80px">
         </a>
@@ -44,8 +44,92 @@
         <div class="bar"><i class="fa-solid fa-bars"></i></div>
     </header>
 
+    <div class="image-carousel">
+        <img src="../Media/event1.png" alt="Slide 1" class="carousel-image active">
+        <img src="../Media/event2.png" alt="Slide 2" class="carousel-image">
+        <img src="../Media/event3.png" alt="Slide 3" class="carousel-image">
+    </div>
 
-    <h1 style="margin-top: 100px;">Events page</h1>
+    <section class="cards">
+        <div class="card">
+            <img src="../Media/event1.png" alt="SIH">
+            <h3>SIH 2024</h3>
+            <p>We successfully coordinated the Smart India Hackathon Finals 2024, conducted at Lovely Professional University.
+                 This nationwide event provided a platform for students to solve pressing societal challenges. 
+                 It was an incredible experience to witness teamwork and innovation, as participants collaborated to 
+                 develop impactful solutions. The event not only fostered creativity but also showcased the exceptional 
+                 organizational skills of our team.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="../Media/event2.png" alt="TechSprint">
+            <h3>TechSprint 2.0</h3>
+            <p>TechSprint 2.0 was a collaborative event between Lovely Professional University and DPS Jalandhar, aimed at 
+                fostering innovation and technical expertise. Our team coordinated the event, which included engaging
+                 competitions for school students. Participants showcased their talents, and the event highlighted 
+                 the importance of teamwork and skill-building. It was a rewarding experience to contribute to 
+                 such a successful initiative.
+                
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="../Media/event3.png" alt="PUM">
+            <h3>PUM</h3>
+            <p>Under the guidance of Mr. Mick, an expert mentor in entrepreneurship, we organized a 10-day bootcamp
+                 focused on transforming ideas into actionable ventures. Participants gained insights into business 
+                 strategies, leadership, and market dynamics. The bootcamp proved to be an enriching journey, leaving
+                  everyone inspired and equipped with practical knowledge. It was a remarkable learning experience
+                   for all involved.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo-section">
+                <div class="ft-head">
+                    <img src="../Media/logo_bg.png" alt="logo">
+                    <h3>SPARK</h3>
+                </div>
+                <p>Lovely Professional University<br>
+                    Jalandhar-Delhi, G.T. Road,<br>
+                    Phagwara, Punjab<br>
+                    (INDIA) - 144411</p>
+                <p>Tel: +91 82890-00254</p>
+                <p>Email: <a href="mailto:spark.lpu@gmail.com">spark.lpu@gmail.com</a> </p>
+            </div>
+            <div class="links-section">
+                <div class="ft-head">
+                    <h3>Useful Links</h3>
+                </div>
+                <p><a href="../">Home</a></p>
+                <p><a href="./">Events</a></p>
+                <p><a href="../team/">Team</a></p>
+                <p><a href="../story/">Story</a></p>
+                <p><a href="../#contact">Contact Us</a></p>
+            </div>
+            <div class="social-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.instagram.com/spark_lpu/"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/spark2024/posts/?feedView=all"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="newsletter">
+                    <form action="/subscribe" method="POST" id="newsletter">
+                        <input type="email" name="email" placeholder="Your Email Address" required>
+                        <button type="submit">Get Updates</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2025 All Rights Reserved by Student Platform for Accelerating Resourceful Knowledge</p>
+        </div>
+    </footer>
 
 
     <script src="script.js"></script>
