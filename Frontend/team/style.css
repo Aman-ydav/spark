@@ -4,7 +4,11 @@ h1{
     color: orange;
     font-size: 40px;
     font-family: Jura;
+    margin-bottom: 1.5%;
+}
 
+.Heading h1{
+    margin-bottom: -1%;
 }
 
 .MentorPhoto{
@@ -22,7 +26,7 @@ h1{
 }
 
 .MentorColumn{
-    justify-content: center;
+    justify-content: justify;
 }
 
 .descriptionmentor{
@@ -52,7 +56,12 @@ h1{
     display:flex;
 }
 
-
+.sectionSX .logo{
+    margin-bottom: -7%;
+}
+.sectionJX .logo{
+    margin-bottom: -7%;
+}
 
 .PhotoColumn1{
     margin: auto;
@@ -65,7 +74,7 @@ h1{
 
     width:100%;
     height:100%;
-    padding:18%;
+    padding:20%;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -85,16 +94,16 @@ h1{
     width: max-content;
     height: max-content;
     text-align: center;
-    margin-bottom: -1%;
-    margin-top: -1%;
+    margin-bottom: 5.5%;
+    margin-top: -2%;
 }
 
 .descriptionB{
-    margin-top: 2%;
+    margin-top: .5%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: -5%;
+    margin-bottom: .5%;
 }
 
 .sectionJX{
@@ -105,6 +114,57 @@ h1{
     display: flex;
 }
 .descriptionMentor p{
+    margin-top: -1.5%;
     flex:50%;
+    margin-bottom: 1%;
     text-align: center;
+}
+
+.logo{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.logo.left.middle.right{
+    flex:33%;
+}
+.logo img{
+    height:auto;
+    width: 5%;
+}
+
+.Logo{
+    display: flex;
+    text-align: center;
+}
+.Middle{
+    flex: 33%;
+    text-align: center;
+}
+.Middle img{
+    height:auto;
+    width:1.7%;
+}
+
+.LogoMentor{
+    margin-top: -.5%;
+    display: flex;
+    text-align: center;
+    margin-bottom: 1%;
+}
+.LogoMentor.Left.Right{
+    flex:50%;
+}
+.Left img{
+    height: auto;
+    width:3.5%;
+}
+.Right img{
+    height: auto;
+    width:3.5%;
+}
+
+.Logo{
+    margin-bottom: -7%;
 }
