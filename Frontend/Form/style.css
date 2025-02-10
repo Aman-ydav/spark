@@ -30,11 +30,10 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
-
 .navigation-buttons {
   position: absolute;
   top: 65px;
-  left: 50px; 
+  left: 50px;
   z-index: 1;
 }
 
@@ -53,8 +52,6 @@ html::-webkit-scrollbar-thumb {
 .home-button:hover {
   box-shadow: 0 4px 14px gray;
 }
-
-
 
 .container {
   margin: 50px;
@@ -82,7 +79,7 @@ html::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s linear;
 }
 
 .carousel-image.active {
