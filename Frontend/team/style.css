@@ -15,7 +15,7 @@ h1{
     margin-top: 5%;
     margin-left: 20%;
     width: 40%;
-    height: 80%;
+    height: 80% ;
     border-radius: 50%;
 }
 
@@ -39,7 +39,6 @@ h1{
 }
 
 .TeamPhoto{
-    
     padding:17%;
     width:100%;
     height: 100%;
@@ -48,7 +47,7 @@ h1{
 .PhotoColumn{
     height: max-content;
     flex: 33%;
-    padding: 80px;
+    padding: 6%;
 }
 .PhotoRow{
     margin-bottom: -5%;
@@ -70,8 +69,31 @@ h1{
     height: max-content;
     margin-bottom: -5%;
 }
-.CEOPhoto{
+@media (max-width:800px) {
+    
+    .descriptionX{ 
+        font-size: 80%;
+    }
+    .descriptionB{
+        font-size: 80%;
+    }
 
+    h1{
+        font-size:2rem;
+        text-align: center;
+    }
+    .PhotoColumn1{
+        flex:100%;
+        width:30%;
+        height: 30%;
+        margin-bottom: -5%;
+    }
+    .PhotoColumn{
+        padding: 4%;
+        flex: 33%;
+    }
+}
+.CEOPhoto{
     width:100%;
     height:100%;
     padding:20%;
