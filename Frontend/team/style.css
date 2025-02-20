@@ -69,12 +69,29 @@ h1{
     height: max-content;
     margin-bottom: -5%;
 }
+
 @media (max-width:800px) {
-    
+
+    .logo img, .Logo img, .Middle img, .Left img, .Right img, .logo.left.middle.right, .LogoMentor.Left.Right{
+        width: 8% !important;  /* Override any existing styles */
+        height: auto;
+        /* margin-bottom: 3% !important; */
+    }
+    .LogoMentor img{
+        width:6% !important;
+        height: auto;
+    }
+    .Logo .Middle img{
+        width: 2.8% !important;
+        height:auto;
+        margin-bottom: 3%;
+    }
     .descriptionX{ 
         font-size: 80%;
     }
     .descriptionB{
+        margin-top: -6% !important;
+
         font-size: 80%;
     }
 
@@ -92,6 +109,8 @@ h1{
         padding: 4%;
         flex: 33%;
     }
+
+    
 }
 .CEOPhoto{
     width:100%;
@@ -121,7 +140,7 @@ h1{
 }
 
 .descriptionB{
-    margin-top: .5%;
+    margin-top: .3%;
     align-items: center;
     justify-content: center;
     text-align: center;
