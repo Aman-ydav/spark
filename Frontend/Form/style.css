@@ -96,11 +96,15 @@ html::-webkit-scrollbar-thumb {
   opacity: 1001;
 }
 
-.form-container h1 {
+.form-container h2 {
   margin-bottom: 20px;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #ff991c;
+  color: #4a4641;
+}
+
+.form-container h2 span {
+  font-size: 3rem;
 }
 
 span {

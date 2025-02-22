@@ -73,9 +73,9 @@ h1{
 @media (max-width:800px) {
 
     .logo img, .Logo img, .Middle img, .Left img, .Right img, .logo.left.middle.right, .LogoMentor.Left.Right{
-        width: 8% !important;  /* Override any existing styles */
+        width: 8% !important;  
         height: auto;
-        /* margin-bottom: 3% !important; */
+       
     }
     .LogoMentor img{
         width:6% !important;
@@ -183,9 +183,12 @@ h1{
     flex: 33%;
     text-align: center;
 }
-.Middle img{
+.Middle a img{
     height:auto;
     width:1.7%;
+}
+.Middle a{
+    cursor: pointer;
 }
 
 .LogoMentor{

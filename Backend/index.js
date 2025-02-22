@@ -35,7 +35,7 @@ const contactSchema = new mongoose.Schema({
   email: { type: String, required: true },
   query: { type: String, required: true },
   date: { type: Date, default: Date.now },
-});
+});                                                            
 
 const newsletterSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
