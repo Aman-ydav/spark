@@ -55,7 +55,3 @@ Welcome to the SPARK Application! 🚀 This project is a dynamic web application
 For queries or feedback:
 - Email: [spark.lpu@gamil.com](mailto:-spark.lpu@gmail.com)
 - GitHub: [Aman](https://github.com/Aman-ydav)
-
----
-
-Happy Coding! 🎨✨
