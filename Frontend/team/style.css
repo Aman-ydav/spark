@@ -14,19 +14,20 @@ main {
 }
 .mentor-container {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  gap: 50px;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 .mentor-card {
   padding: 30px;
   display: flex;
-  width: 750px;
+  width: 700px;
   margin: 40px 0;
   border-radius: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: 0.2s ease-in;
- 
+  background-color: rgb(247, 241, 223);
 }
 .mentor-img h4 {
   padding-top: 5px;
@@ -55,7 +56,6 @@ main {
 }
 
 .team-card {
-  background: white;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -63,6 +63,8 @@ main {
   transition: 0.2s ease-in;
   flex: 1 1 calc(33.33% - 40px);
   max-width: 350px;
+  background-color: rgb(247, 241, 223);
+
 }
 .team-card p {
   padding-bottom: 10px;
@@ -70,8 +72,8 @@ main {
 
 .mentor-card img,
 .team-card img {
-  height: 200px;
-  width: 200px;
+  height: 230px;
+  width: 240px;
   border-radius: 50%;
   padding-bottom: 15px;
 }
@@ -80,30 +82,41 @@ main {
   box-shadow: 5px 10px 10px rgb(238, 188, 6);
 }
 
+#seinor,#board{
+  margin-bottom: 50px;
+}
 @media (max-width: 900px) {
-  .team-card{
+  .team-card {
     flex: 1 1 calc(33.33% - 40px);
+  background-color: rgb(253, 245, 250);
+
   }
   .team-container {
     gap: 20px;
   }
-  .mentor-card{
-        display: block;
-        width: 90vw;
+  .mentor-card {
+    display: block;
+    width: 90vw;
+    background-color: rgb(253, 245, 250);
+
+
+
   }
   .team-section h1 {
     font-size: 2rem;
     padding-bottom: 0;
   }
+  .mentor-container {
+    display: flex;
+    flex-direction: column;
+  }
   .mentor-card i {
     padding-bottom: 20px;
-
   }
-  .mentor-card p{
+  .mentor-card p {
     width: 100vw;
     display: contents;
     text-align: justify;
     padding: 20px 0 0 0;
   }
 }
-
