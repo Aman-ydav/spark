@@ -3,6 +3,7 @@
   height: 700px;
   position: relative;
   overflow: hidden;
+  margin-top: 90px;
 }
 
 .carousel-image {
@@ -29,6 +30,9 @@
   padding: 20px;
 }
 
+a{
+  text-decoration: none;
+}
 .card {
   background-color: #fefefe;
   border-radius: 10px;
@@ -52,9 +56,15 @@
 }
 
 .card p {
+
   margin: 20px;
   color: #666;
   line-height: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: 5px 10px 10px #212121;
+  background: linear-gradient(135deg, white,#e9e6e6);
 }
 
 @media (max-width: 768px) {
