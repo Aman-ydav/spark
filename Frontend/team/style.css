@@ -12,6 +12,9 @@ main {
   color: rgb(99, 94, 94);
   padding-bottom: 20px;
 }
+.team-section #H{
+  padding-bottom: 30px !important;
+}
 .mentor-container {
   display: flex;
   gap: 50px;
@@ -82,7 +85,7 @@ main {
   box-shadow: 5px 10px 10px rgb(238, 188, 6);
 }
 
-#seinor,#board{
+#seinor,#board1{
   margin-bottom: 50px;
 }
 @media (max-width: 900px) {
