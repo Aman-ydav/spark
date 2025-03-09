@@ -25,9 +25,3 @@ document.addEventListener("DOMContentLoaded", () => {
     errorDiv.textContent = errorMessage;
   }
 });
-
-let form = document.querySelector("form");
-
-form.addEventListener("submit", () => {
-  alert("Successfully submitted");
-});

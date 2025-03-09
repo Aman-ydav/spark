@@ -35,7 +35,7 @@ const contactSchema = new mongoose.Schema({
   email: { type: String, required: true },
   query: { type: String, required: true },
   date: { type: Date, default: Date.now },
-});                                                            
+});
 
 const newsletterSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
@@ -63,7 +63,6 @@ app.get("/form", (req, res) => {
 app.post("/submit", async (req, res) => {
   try {
     if (req.body.query) {
-     
       const { name, email, query } = req.body;
 
       if (!name || !email || !query) {
@@ -72,11 +71,12 @@ app.post("/submit", async (req, res) => {
 
       const contact = new Contact({ name, email, query });
       await contact.save();
+    alert("Successfully submitted! You will contact you soon.");
       return res.redirect("/");
     }
 
-    
-    const { name, regno, email, phone, department, domain, contribution } = req.body;
+    const { name, regno, email, phone, department, domain, contribution } =
+      req.body;
 
     if (!name || !regno || !email || !phone || !department || !contribution) {
       return res.status(400).send("All fields are required!");
@@ -84,11 +84,22 @@ app.post("/submit", async (req, res) => {
 
     const existingUser = await User.findOne({ $or: [{ regno }, { email }] });
     if (existingUser) {
-      return res.redirect("/Form?error=Registration Number or Email already exists!");
+      return res.redirect(
+        "/Form?error=Registration Number or Email already exists!"
+      );
     }
 
-    const user = new User({ name, regno, email, phone, department, domain, contribution });
+    const user = new User({
+      name,
+      regno,
+      email,
+      phone,
+      department,
+      domain,
+      contribution,
+    });
     await user.save();
+    alert("Successfully submitted! You will receive an interview email soon.");
     res.redirect("/");
   } catch (error) {
     console.error("Error submitting form:", error);
@@ -98,7 +109,7 @@ app.post("/submit", async (req, res) => {
 
 app.post("/subscribe", async (req, res) => {
   try {
-    console.log("Received data:", req.body);  // Debugging line
+    console.log("Received data:", req.body); // Debugging line
 
     const { email } = req.body;
 
@@ -113,14 +124,13 @@ app.post("/subscribe", async (req, res) => {
 
     const subscription = new Newsletter({ email });
     await subscription.save();
+    alert("Successfully submitted! We will keep you updated via email regularly.");
     res.redirect("/");
   } catch (error) {
     console.error("Error subscribing:", error);
     res.status(500).send("Internal Server Error");
   }
 });
-
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, "0.0.0.0", () => {

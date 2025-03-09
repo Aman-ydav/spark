@@ -3,7 +3,7 @@
   height: 700px;
   position: relative;
   overflow: hidden;
-  margin-top: 90px;
+  margin-top: 50px;
 }
 
 .carousel-image {
@@ -14,7 +14,7 @@
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .carousel-image.active {
@@ -24,13 +24,13 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 10rem;
   margin: 8rem 1vw 6rem 10vw;
-  padding: 20px;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 40px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 .card {
@@ -40,12 +40,22 @@ a{
   flex: 1 1 calc(50% - 40px);
   max-width: 500px;
   margin: 10px;
-  box-shadow: 4px 4px 10px rgb(172, 170, 170);
+  transition: 1s ease-in-out;
+  position: relative;
+  width: 280px;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+ 
+ 
 }
 
 .card img {
   width: 100%;
   height: 300px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
@@ -56,19 +66,18 @@ a{
 }
 
 .card p {
-
   margin: 20px;
   color: #666;
-  line-height: 1.5rem;
+  line-height: 1.4rem;
 }
 
 .card:hover {
   box-shadow: 5px 10px 10px #212121;
-  background: linear-gradient(135deg, white,#e9e6e6);
+  background: linear-gradient(135deg, white, #e9e6e6);
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-
   .image-carousel {
     width: 100%;
     height: 300px;
@@ -98,4 +107,97 @@ a{
   .card h3 {
     margin: 10px;
   }
+}
+
+
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: rgb(245, 225, 225);
+  border-radius: 8px;
+  text-align: left;
+  width: 70%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 30px 30px;
+}
+
+.popup img {
+  width: 100%;
+  max-height: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#popup-title {
+  color: orange;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.close-btn {
+  height: 10px;
+  width: 10px;
+  position: sticky;
+  top: 10px;
+  left: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(255, 140, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .popup-content {
+    width: 70%;
+  }
+  .card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup-content {
+    width: 90%;
+    padding: 15px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+
+
+.info-text {
+  position: absolute;
+  font-size: 16px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.card:hover .info-text {
+  opacity: 1;
 }

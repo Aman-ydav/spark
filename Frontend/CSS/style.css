@@ -36,6 +36,13 @@ body {
   color: #fd920f;
   transition: text-shadow 0.1s linear;
   cursor: pointer;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  text-shadow: 3px 3px 0px #fcd1b0, 6px 6px 0px #e2d2be, 9px 9px 0px #fcead0;
+  
 }
 .herotext p {
   position: absolute;
@@ -53,6 +60,7 @@ body {
 }
 .herotext h1:hover {
   text-shadow: 0 4px 6px rgb(205, 202, 202);
+  text-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
 }
 .herotext h1:hover ~ p {
   opacity: 1;
@@ -68,6 +76,8 @@ body {
   line-height: 1.6rem;
   padding: 20px 5px 30px 5px;
   color: rgb(95, 94, 94);
+
+
 }
 
 .herotext .button {
@@ -88,11 +98,14 @@ body {
   border-radius: 5px;
   transition: all 0.3s ease;
   font-weight: 700;
+  box-shadow: 3px 3px 0px #fcd1b0, 6px 6px 0px #e2d2be, 9px 9px 0px #fcead0;
 }
 .herotext .button:hover {
   background-color: #ff991c;
   color: white;
   box-shadow: 0 4px 14px gray;
+  box-shadow: 6px 6px 0px #fcd1b0, 10px 10px 0px #e2d2be, 13px 13px 0px #fcead0;
+  
 }
 .herotext .button:active {
   background-color: #ff991c;
@@ -140,12 +153,15 @@ body {
   .herotext h1 {
     font-weight: 800;
     font-size: 5rem;
+   text-shadow: 4px 4px 0px #f5e6ef, 8px 8px 0px #f7f1f5, 10px 10px 0px #fdf4f9;
+
   }
 
   .herotext h3 {
     width: 80%;
     font-size: 1.9vmax;
     padding: 10px 5px 15px 5px;
+    text-shadow: none;
   }
   .herotext .button {
     cursor: pointer;
@@ -165,6 +181,8 @@ body {
     border-radius: 5px;
     transition: all 0.3s ease;
     font-weight: 700;
+      box-shadow: 4px 4px 0px #f5e6ef, 8px 8px 0px #f7f1f5, 10px 10px 0px #fdf4f9;
+
   }
 
   .herotext p {
@@ -179,7 +197,7 @@ body {
   }
 }
 
-/* events */
+
 .events-section {
   text-align: center;
   padding: 20px;
@@ -199,18 +217,21 @@ body {
   width: calc(22% - 20px);
   transition: 0.2s ease;
   border-radius: 3%;
+  box-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
 }
 .event-card img {
   width: 100%;
-  aspect-ratio: 9/10;
-
+  aspect-ratio: 10/9;
   transition: 0.2s ease;
 }
 .event-card:hover {
   box-shadow: 0 5px 15px gray;
+  box-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
 }
 .event-card:hover img {
   transform: scale(1.15);
+  box-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
+
 }
 
 .event-title {
@@ -242,10 +263,14 @@ body {
   font-size: 1.2rem;
   transition: all 0.3s ease;
   font-weight: 700;
+  box-shadow: 3px 3px 0px #fcd1b0, 6px 6px 0px #e2d2be, 9px 9px 0px #fcead0;
+
 }
 .view-more-btn:hover {
   background-color: #ff991c;
   box-shadow: 0 4px 14px gray;
+  box-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
+
 }
 
 @media (max-width: 800px) {
@@ -288,7 +313,6 @@ body {
   }
 }
 
-/* team */
 .team-section {
   text-align: center;
   padding: 20px;
@@ -308,14 +332,18 @@ body {
   width: calc(22% - 20px);
   transition: 0.2s ease;
   border-radius: 3%;
+  box-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
+
 }
 .team-card img {
   width: 100%;
-  aspect-ratio: 9/10;
+  aspect-ratio: 10/9;
   transition: 0.2s ease;
 }
 .team-card:hover {
   box-shadow: 0 5px 15px gray;
+  box-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
+
 }
 .team-card:hover img {
   transform: scale(1.15);
@@ -353,10 +381,14 @@ body {
   font-size: 1.2rem;
   transition: all 0.3s ease;
   font-weight: 700;
+  box-shadow: 3px 3px 0px #fcd1b0, 6px 6px 0px #e2d2be, 9px 9px 0px #fcead0;
+
 }
 .view-more-btn-team:hover {
   background-color: #ff991c;
   box-shadow: 0 4px 14px gray;
+  box-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
+
 }
 
 @media (max-width: 800px) {
@@ -399,13 +431,11 @@ body {
   }
 }
 
-
-
-
-.contact{
+.contact {
   text-align: center;
   padding: 20px;
   margin-top: 2rem;
+  
 }
 
 .contact-heading {
@@ -416,7 +446,6 @@ body {
   margin-bottom: 1rem;
 }
 
-
 .contact-section {
   display: flex;
   justify-content: space-around;
@@ -425,29 +454,39 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+
 }
-.contact-image, .contact-form {
+.contact-image,
+.contact-form {
   flex: 1 1 50%;
   max-width: 50%;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  
+}
+.contact-form{
+  box-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
+
 }
 .contact-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  box-shadow: 4px 4px 0px #fcd1b0, 8px 8px 0px #e2d2be, 10px 10px 0px #fcead0;
+  
 }
 .contact-form form {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  
 }
-.contact-form input, 
-.contact-form textarea, 
+.contact-form input,
+.contact-form textarea,
 .contact-form button {
   width: 100%;
   padding: 10px;
@@ -457,6 +496,8 @@ body {
   border-radius: 5px;
   font-size: 1.3rem;
   font-weight: 500;
+  box-shadow: 3px 3px 0px #fcd1b0, 6px 6px 0px #e2d2be, 9px 9px 0px #fcead0;
+
 }
 form textarea {
   max-height: 200px;
@@ -464,8 +505,8 @@ form textarea {
   max-width: 100%;
   min-width: 100%;
 }
-.contact-form{
-  background-color: #FFE9D5;
+.contact-form {
+  background-color: #ffe9d5;
   border-radius: 10px;
   margin: 20px 0;
 }
@@ -475,21 +516,26 @@ form textarea {
   border: none;
   cursor: pointer;
   letter-spacing: 0.5rem;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.5rem;
+  transition: 0.2s ease-in-out;
 }
 .contact-form button:hover {
   background-color: #fd920f;
+  box-shadow: 6px 6px 0px #fcd1b0, 10px 10px 0px #e2d2be, 13px 13px 0px #fcead0;
+  font-size: 1.6rem;
+  font-weight: bold;
+
 }
 
 @media (max-width: 768px) {
   .contact-section {
-      flex-direction: column-reverse;
-      height: auto;
+    flex-direction: column-reverse;
+    height: auto;
   }
-  .contact-image, .contact-form {
-      flex: 1 1 100%;
-      max-width: 100%;
+  .contact-image,
+  .contact-form {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
-

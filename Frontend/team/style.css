@@ -12,7 +12,7 @@ main {
   color: rgb(99, 94, 94);
   padding-bottom: 20px;
 }
-.team-section #H{
+.team-section #H {
   padding-bottom: 40px !important;
 }
 .mentor-container {
@@ -29,8 +29,9 @@ main {
   margin: 40px 0;
   border-radius: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: 0.2s ease-in;
   background-color: rgb(247, 241, 223);
+  box-shadow: 4px 4px 0px #f5e6ef, 8px 8px 0px #f7f1f5, 10px 10px 0px #fdf4f9;
+  transition: 0.3s ease-in;
 }
 .mentor-img h4 {
   padding-top: 5px;
@@ -46,7 +47,7 @@ main {
 .mentor-card p {
   height: 100%;
   width: 30rem;
-  text-align: justify;
+  text-align: left;
   padding-left: 30px;
   padding-top: 10px;
 }
@@ -67,7 +68,8 @@ main {
   flex: 1 1 calc(33.33% - 40px);
   max-width: 350px;
   background-color: rgb(247, 241, 223);
-
+  box-shadow: 4px 4px 0px #f5e6ef, 8px 8px 0px #f7f1f5, 10px 10px 0px #fdf4f9;
+  transition: 0.2s ease;
 }
 .team-card p {
   padding-bottom: 10px;
@@ -83,16 +85,19 @@ main {
 .mentor-card:hover,
 .team-card:hover {
   box-shadow: 5px 10px 10px rgb(238, 188, 6);
+  box-shadow: 6px 6px 0px #f5e6ef, 10px 10px 0px #f7f1f5, 13px 13px 0px #fdf4f9;
+
+  scale: 1.05;
 }
 
-#seinor,#board1{
+#seinor,
+#board1 {
   margin-bottom: 50px;
 }
 @media (max-width: 900px) {
   .team-card {
     flex: 1 1 calc(33.33% - 40px);
-  background-color: rgb(253, 245, 250);
-
+    background-color: #fdf5fa;
   }
   .team-container {
     gap: 20px;
@@ -100,10 +105,7 @@ main {
   .mentor-card {
     display: block;
     width: 90vw;
-    background-color: rgb(253, 245, 250);
-
-
-
+    background-color: #fdf5fa;
   }
   .team-section h1 {
     font-size: 2rem;
