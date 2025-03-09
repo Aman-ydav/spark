@@ -94,6 +94,7 @@ main {
 #board1 {
   margin-bottom: 50px;
 }
+
 @media (max-width: 900px) {
   .team-card {
     flex: 1 1 calc(33.33% - 40px);

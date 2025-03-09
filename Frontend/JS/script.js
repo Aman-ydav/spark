@@ -87,3 +87,19 @@ function handleSwipeT() {
   }
 }
 
+
+
+const cont = document.querySelector('#contact');
+
+cont.addEventListener('submit',()=> {
+  alert("We will contact you soon 🙂\nClick OK to confirm!");
+});
+
+
+const news = document.querySelector('#newsletter');
+
+news.addEventListener('submit',()=> {
+  alert("We will keep you updated via email regularly.\nClick OK to confirm!");
+});
+
+

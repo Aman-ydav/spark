@@ -31,6 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
 const form = document.querySelector('form');
 
 form.addEventListener('submit',()=> {
-  alert("Successfully submitted! You will get interview details via mail.");
-
+  alert("Successfully submitted! You will get interview details via Mail.\nClick OK to continue!");
 });

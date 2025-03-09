@@ -138,14 +138,15 @@ a {
 }
 
 .popup img {
+  padding: 20px;
   width: 100%;
   max-height: 350px;
-  border-radius: 8px;
   object-fit: cover;
+  border-radius: 30px;
 }
 
 #popup-title {
-  color: orange;
+  color: black;
   display: inline-block;
   font-size: 3rem;
   font-weight: bold;
@@ -157,17 +158,17 @@ a {
   height: 10px;
   width: 10px;
   position: sticky;
-  top: 10px;
+  top: 0;
   left: 100%;
   font-size: 3rem;
   font-weight: bold;
   cursor: pointer;
-  color: rgb(255, 140, 0);
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
   .popup-content {
-    width: 70%;
+    width: 90%;
   }
   .card {
     width: 90%;
@@ -177,10 +178,17 @@ a {
 @media screen and (max-width: 480px) {
   .popup-content {
     width: 90%;
-    padding: 15px;
+    padding: 0px
   }
   .card {
     width: 100%;
+  }
+  #popup-title {
+    color: black;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
 }
 
@@ -188,10 +196,10 @@ a {
 
 .info-text {
   position: absolute;
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2px 3px;
   border-radius: 5px;
   pointer-events: none;
   opacity: 0;
