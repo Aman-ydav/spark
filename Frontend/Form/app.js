@@ -25,3 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
     errorDiv.textContent = errorMessage;
   }
 });
+
+
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit',()=> {
+  alert("Successfully submitted! You will get interview details via mail.");
+
+});

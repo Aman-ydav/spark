@@ -71,7 +71,6 @@ app.post("/submit", async (req, res) => {
 
       const contact = new Contact({ name, email, query });
       await contact.save();
-    alert("Successfully submitted! You will contact you soon.");
       return res.redirect("/");
     }
 
@@ -99,7 +98,7 @@ app.post("/submit", async (req, res) => {
       contribution,
     });
     await user.save();
-    alert("Successfully submitted! You will receive an interview email soon.");
+
     res.redirect("/");
   } catch (error) {
     console.error("Error submitting form:", error);
@@ -109,8 +108,7 @@ app.post("/submit", async (req, res) => {
 
 app.post("/subscribe", async (req, res) => {
   try {
-    console.log("Received data:", req.body); // Debugging line
-
+    console.log("Received data:", req.body); 
     const { email } = req.body;
 
     if (!email || email.trim() === "") {
@@ -124,7 +122,6 @@ app.post("/subscribe", async (req, res) => {
 
     const subscription = new Newsletter({ email });
     await subscription.save();
-    alert("Successfully submitted! We will keep you updated via email regularly.");
     res.redirect("/");
   } catch (error) {
     console.error("Error subscribing:", error);
