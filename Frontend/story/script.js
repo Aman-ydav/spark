@@ -30,8 +30,14 @@ nextBtn.addEventListener('click', () => {
     updateCarousel();
 });
 
-// Optional: Auto-slide every 5 seconds
 setInterval(() => {
     currentIndex = (currentIndex + 1) % items.length;
     updateCarousel();
 }, 5000);
+
+
+const news = document.querySelector('#newsletter');
+
+news.addEventListener('submit',()=> {
+  alert("We will keep you updated via email regularly.\nClick OK to confirm!");
+});

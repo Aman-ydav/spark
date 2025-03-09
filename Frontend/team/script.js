@@ -9,3 +9,10 @@ bar.addEventListener("click", () => {
   }
 });
 
+
+
+const news = document.querySelector('#newsletter');
+
+news.addEventListener('submit',()=> {
+  alert("We will keep you updated via email regularly.\nClick OK to confirm!");
+});
